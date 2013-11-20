@@ -32,7 +32,7 @@ class PluginViewcount_ModuleTopic extends PluginViewcount_Inherit_ModuleTopic {
 	public function GetTopicsAdditionalData($aTopicId,$aAllowData=null) {
 		$args =  func_get_args();
 		if (!$aTopics = call_user_func_array(array('parent',__FUNCTION__),$args)) {
-			return;
+			return array();
 		}
 		/*
 		 * Список id топиков
